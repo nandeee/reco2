@@ -5,6 +5,6 @@ def getItems():
     conn=sqlite3.connect('database.db');
     c=conn.cursor()
     for i in c.execute('select * from item'):
-        print (type(i))
+        print (i)
     conn.close()
 getItems()
