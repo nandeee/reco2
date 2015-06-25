@@ -1,0 +1,49 @@
+html, body {
+  font-family: 'Maven Pro', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+core-header-panel {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+core-toolbar {
+  background: #9C27B0;
+  color: white;
+}
+paper-tab{
+  cursor: pointer;
+}
+#tabs {
+  width: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+@media (min-width: 481px) {
+  #tabs {
+    font-size: 24px;
+    font-weight: bold;
+    /*width: 200px;*/
+  }
+  .container {
+    width: 400px;
+  }
+}
+
+#site-banner {
+  background-color: #4F7DC9;
+  color: #FFF;
+  font-size: 36px;
+  padding: 10px;
+}

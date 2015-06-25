@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 # import shutil
 # import requests
-# import json
+import json
 import os
 # import traceback, os.path
 # import bs4
@@ -17,8 +17,18 @@ DJ_PROJECT_DIR = os.path.dirname(__file__)
 BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
 LOG_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'txt')
 
+def getItems(request):
+    raw_input("Press Enter")
+
+    res = {"param1": "one", "param2": "two"}
+    return HttpResponse(json.dumps(res), content_type='application/json')
+
 def index(request):
     template = loader.get_template("scraper/index.html")
+    return HttpResponse(template.render())
+
+def reco(request):
+    template = loader.get_template("scraper/reco.html")
     return HttpResponse(template.render())
 
 def getLinks(request, city, category):
@@ -127,6 +137,12 @@ def getPos(request, city, category):
     with open(fileErr) as f:
         retErr = int(f.readline())
     res = {"pos": start, "retErr": retErr}
+    return HttpResponse(json.dumps(res), content_type='application/json')
+
+def testSend(request, A, B):
+    print A
+    print B
+    res = {"A": A, "B": B}
     return HttpResponse(json.dumps(res), content_type='application/json')
 
 def processFile(request, city, category):
