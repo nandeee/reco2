@@ -1,16 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
-import shutil
-import requests
-import json
+# import shutil
+# import requests
+# import json
 import os
-import traceback, os.path
-import bs4
-import re
-import urllib2
-from bs4 import BeautifulSoup
-import xlsxwriter
+# import traceback, os.path
+# import bs4
+# import re
+# import urllib2
+# from bs4 import BeautifulSoup
+# import xlsxwriter
 from pprint import pprint
 
 DJ_PROJECT_DIR = os.path.dirname(__file__)
