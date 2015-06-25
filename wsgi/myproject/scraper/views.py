@@ -5,6 +5,7 @@ from django.template import RequestContext, loader
 # import requests
 import json
 import os
+import sqlite3
 # import traceback, os.path
 # import bs4
 # import re
@@ -18,9 +19,12 @@ BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
 LOG_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'txt')
 
 def getItems(request):
-    raw_input("Press Enter")
-
-    res = {"param1": "one", "param2": "two"}
+    #raw_input("Press Enter")
+    conn=sqlite3.connect('database.db');
+    c=conn.cursor()
+    c.execute("select * from item")
+    conn.close()
+    #res = {"param1": "one", "param2": "two"}
     return HttpResponse(json.dumps(res), content_type='application/json')
 
 def index(request):

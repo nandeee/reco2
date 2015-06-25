@@ -1,0 +1,7 @@
+
+Item Table:-
+
+Attributes DataTypes   PKey Fkey NULL/NOT_NULL
+item_id    integer     yes        nn
+color      string		  nn 	
+size       string                 nn

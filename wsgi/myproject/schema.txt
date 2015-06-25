@@ -1,0 +1,43 @@
+
+Item Table:-
+
+Attributes DataTypes   PKey Fkey NULL/NOT_NULL
+item_id    integer     yes        nn
+color      string		  nn 	
+size       string                 nn
+type       string                 nn
+fabric     int                     
+styling    string           
+Brand      string 
+
+
+Body Structure table:-
+Attributes   DataTypes   PKey  Fkey
+type          integer     y
+complexion    char
+fav_color     string      
+fav_type      string
+fav_style     string 
+
+
+Expert Table:-
+
+Attributes   DataTypes     PKey           Fkey
+item_id       integer    composite       y
+structure_id  integer    composite       y
+comments      string
+
+User:-
+Attributes   DataTypes     PKey           Fkey
+u_id          integer       y
+u_name        string        
+
+
+Forum:-
+Attributes   DataTypes     PKey           Fkey
+uid           integer                   y
+comment       string             
+vote          integer
+item_id       int                       y
+                        
+
