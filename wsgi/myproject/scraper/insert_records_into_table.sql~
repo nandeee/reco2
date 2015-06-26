@@ -3,6 +3,17 @@ insert into users values (2, "two");
 insert into users values (3, "three");
 insert into users values (4, "four");
 
+--  int   ,    int     , char,   char
+-- item_id, primary_key, type, favourable_color
+insert into bstructure values (1, 1, "large", "dark");
+insert into bstructure values (2, 2, "small/regular", "pastel");
+insert into bstructure values (3, 3, "regular/large", "dark");
+insert into bstructure values (4, 4, "small/regular/large", "small: light, pastel medium & large : dark");
+insert into bstructure values (5, 5, "large", "bright colors");
+insert into bstructure values (6, 6, "large", "dark");
+insert into bstructure values (7, 7, "small/regular/large", "small: light, pastel medium & large : dark");
+insert into bstructure values (8, 8, "regular", "bright colors");
+
 insert into expert_advice values (1, 1, "1 : this looks good on u coz of so and so ...");
 insert into expert_advice values (2, 3, "2 :this looks good on u coz of so and so ...");
 insert into expert_advice values (3, 2, "3 :this looks good on u coz of so and so ...");
